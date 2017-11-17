@@ -41,6 +41,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'better_errors'
   gem 'rails_layout'
+  gem 'binding_of_caller'
 end
 
 group :development do

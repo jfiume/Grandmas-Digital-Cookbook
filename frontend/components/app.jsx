@@ -1,4 +1,5 @@
 import React from 'react';
+import RecipeIndexItemContainer from './recipes/recipe_index_item_container';
 import {
   Route,
   Redirect,
@@ -9,7 +10,7 @@ import {
 
 const App = () => (
   <div>
-    <Route path="/" />
+    <Route path="/" component={RecipeIndexItemContainer}/>
   </div>
 );
 

@@ -7,7 +7,7 @@ import {
 
 const RecipesReducer = (state = {}, action) => {
   Object.freeze(state);
-  switch (expression) {
+  switch (action.type) {
     case RECEIVE_RECIPES:
       return Object.assign({}, acton.recipe);
     case RECEIVE_RECIPE:

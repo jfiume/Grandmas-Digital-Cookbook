@@ -1,6 +1,9 @@
+import styled from 'styled-components';
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import RecipeIndexItemContainer from './recipe_index_item_container';
+
+
 
 class RecipeIndex extends Component {
   constructor(props) {

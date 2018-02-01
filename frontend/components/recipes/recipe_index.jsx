@@ -3,7 +3,19 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import RecipeIndexItemContainer from './recipe_index_item_container';
 
+// defining styled components
+const Loading = styled.div`
 
+`;
+
+const AllRecipes = styled.section`
+
+`;
+
+const Recipes = styled.ul`
+
+`;
+// end styled components
 
 class RecipeIndex extends Component {
   constructor(props) {
@@ -19,15 +31,15 @@ class RecipeIndex extends Component {
       const { recipes } = this.props;
 
       return (
-        <section className="all-recipes">
-          <ul className="recipes">
+        <AllRecipes>
+          <Recipes>
             {Object.values(recipes).map(food => <RecipeIndexItemContainer key={food.id} recipe={food} />)}
-          </ul>
-        </section>
+          </Recipes>
+        </AllRecipes>
       );
     } else {
       return (
-        <div>loading</div>
+        <Loading>loading</Loading>
       );
     }
   }

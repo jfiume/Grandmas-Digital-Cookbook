@@ -1,5 +1,3 @@
-import merge from 'lodash/merge';
-
 import {
   RECEIVE_RECIPES,
   RECEIVE_RECIPE

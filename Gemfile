@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'devise'
 

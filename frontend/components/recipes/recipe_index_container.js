@@ -5,9 +5,9 @@ import {
 } from '../../actions/recipe_actions';
 
 const mapStateToProps = ({recipes}) => {
-  return ({
+  return {
     recipes
-  });
+  };
 };
 
 const mapDispatchToProps = dispatch => {

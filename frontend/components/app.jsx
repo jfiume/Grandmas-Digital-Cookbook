@@ -13,8 +13,9 @@ import {
 const App = () => (
   <div>
     <Route path="/demo" component={RecipeIndexItemContainer}/>
-    <Route path="/recipes" component={RecipeIndexContainer}/>
     <Route path="/recipe/:id" component={RecipeShowContainer}/>
+    <Route exact path="/recipes" component={RecipeIndexContainer}/>
+
   </div>
 );
 

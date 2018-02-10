@@ -1,4 +1,4 @@
-import { connect } from 'react-router';
+import { connect } from 'react-redux';
 import RecipeShow from './recipe_show';
 import {
   fetchRecipe

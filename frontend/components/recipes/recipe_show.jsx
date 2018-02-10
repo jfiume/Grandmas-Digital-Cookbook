@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 import Loading from './recipe_index';
 
 class RecipeShow extends Component {
@@ -21,7 +22,7 @@ class RecipeShow extends Component {
     if (this.props.recipeId === parseInt(this.props.match.params.id)) {
       const recipe = this.props.currentRecipe;
       return (
-        <div>stuff</div>
+        <div>`this is working ${recipe.title}`</div>
       );
     } else {
       return (

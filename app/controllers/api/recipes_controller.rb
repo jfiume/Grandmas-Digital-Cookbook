@@ -43,7 +43,7 @@ class Api::RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    render :show
+    render :index
   end
 
   def edit

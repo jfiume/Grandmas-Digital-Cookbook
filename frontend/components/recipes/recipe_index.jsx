@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import RecipeIndexItemContainer from './recipe_index_item_container';
 
 // defining styled components
-const Loading = styled.div`
+export const Loading = styled.div`
 
 `;
 

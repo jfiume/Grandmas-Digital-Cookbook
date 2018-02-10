@@ -1,7 +1,6 @@
 import { connect } from 'react-router';
 import RecipeShow from './recipe_show';
 import {
-  receiveRecipe,
   fetchRecipe
 } from '../../actions/recipe_actions';
 

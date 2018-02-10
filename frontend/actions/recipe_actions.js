@@ -20,7 +20,7 @@ export const fetchRecipes = () => dispatch => (
 );
 
 export const fetchRecipe = id => dispatch => (
-  APIUtil.fetchRecipe(id).then(video => (
+  APIUtil.fetchRecipe(id).then(recipe => (
     dispatch(receiveRecipe(recipe))
   ))
 );

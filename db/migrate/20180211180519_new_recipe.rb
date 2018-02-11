@@ -1,9 +1,5 @@
-class ChangeRecipes < ActiveRecord::Migration[5.1]
-  def up
-    drop_table :recipes
-  end
-
-  def down
+class NewRecipe < ActiveRecord::Migration[5.1]
+  def change
     create_table :recipes do |t|
       t.string :image_url
       t.string :title, null: false
@@ -13,5 +9,8 @@ class ChangeRecipes < ActiveRecord::Migration[5.1]
       t.text :directions, null: false
       t.timestamps
     end
+
+    add_index :recipes, :title
+    add_index :recipes, :type_of_food
   end
 end

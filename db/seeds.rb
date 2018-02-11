@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Recipe.destroy_all
-recipe1 = Recipe.create(
-  image_url: "www.food.com",
-  description: "A test",
-  title: "Test food",
-  genre: "test genre",
-  directions: "test: step 1: ..."
-)
+
+# recipe1 = Recipe.create(
+#   image_url: "www.food.com",
+#   description: "A test",
+#   title: "Test food",
+#   genre: "test genre",
+#   directions: "test: step 1: ..."
+# )

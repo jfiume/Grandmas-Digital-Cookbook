@@ -3,6 +3,18 @@ import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Loading from './recipe_index';
 
+export const Ingredients = styled.article`
+
+`;
+
+export const Directions = styled.article`
+
+`;
+
+export const PartentSection = styled.section`
+
+`;
+
 class RecipeShow extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +34,10 @@ class RecipeShow extends Component {
     if (this.props.recipeId === parseInt(this.props.match.params.id)) {
       const recipe = this.props.currentRecipe;
       return (
-        <div>this is working {recipe.title}</div>
+        <PartentSection>
+          <Ingredients>{recipe.ingredients}</Ingredients>
+          <Directions>{recipe.directions}</Directions>
+        </PartentSection>
       );
     } else {
       return (

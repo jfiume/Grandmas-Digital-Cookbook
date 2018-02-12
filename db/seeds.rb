@@ -8,10 +8,11 @@
 
 Recipe.destroy_all
 
-# recipe1 = Recipe.create(
-#   image_url: "www.food.com",
-#   description: "A test",
-#   title: "Test food",
-#   genre: "test genre",
-#   directions: "test: step 1: ..."
-# )
+recipe1 = Recipe.create(
+  image_url: "www.food.com",
+  title: "Test food",
+  type_of_food: "test genre",
+  ingredients: "test1, test2, test3...",
+  prep: "test prep",
+  directions: "test: step 1: ..."
+)

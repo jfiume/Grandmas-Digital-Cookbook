@@ -34,10 +34,12 @@ class RecipeIndexItem extends Component {
     const { recipe } = this.props;
     return (
       <RecipeIndexLi>
-        <img src={recipe.image_url} alt={recipe.title} />
-        <RecipeAttributes>
-          <RecipeName>{recipe.title}</RecipeName>
-        </RecipeAttributes>
+        <Link to={`/recipe/${recipe.id}`}>
+          <img src={recipe.image_url} alt={recipe.title} />
+          <RecipeAttributes>
+            <RecipeName>{recipe.title}</RecipeName>
+          </RecipeAttributes>
+        </Link>
       </RecipeIndexLi>
     );
   }

@@ -9,7 +9,7 @@
 Recipe.destroy_all
 
 recipe1 = Recipe.create(
-  image_url: "www.food.com",
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/9/99/Cannoli_siciliani.jpg",
   title: "Test food",
   type_of_food: "test genre",
   ingredients: "test1, test2, test3...",

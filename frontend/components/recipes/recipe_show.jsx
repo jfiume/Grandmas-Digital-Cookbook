@@ -22,7 +22,7 @@ class RecipeShow extends Component {
     if (this.props.recipeId === parseInt(this.props.match.params.id)) {
       const recipe = this.props.currentRecipe;
       return (
-        <div>`this is working ${recipe.title}`</div>
+        <div>this is working {recipe.title}</div>
       );
     } else {
       return (

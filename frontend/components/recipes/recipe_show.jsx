@@ -33,6 +33,7 @@ class RecipeShow extends Component {
   render() {
     if (this.props.recipeId === parseInt(this.props.match.params.id)) {
       const recipe = this.props.currentRecipe;
+      console.log(recipe.ingredients);
       return (
         <PartentSection>
           <Ingredients>{recipe.ingredients}</Ingredients>

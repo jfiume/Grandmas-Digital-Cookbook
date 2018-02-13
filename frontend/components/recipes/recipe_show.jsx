@@ -41,8 +41,12 @@ class RecipeShow extends Component {
   renderIngredients() {
     const ingredients = this.props.currentRecipe.ingredients;
     return (
-      ingredients.map(ingredient => <IngredientsList key={ingredient} ingredient={ingredient} />
-      )
+      <div>
+        <h2>Ingredients</h2>
+        <ul>
+          {ingredients.map(ingredient => <IngredientsList key={ingredient} ingredient={ingredient} /> )}
+        </ul>
+      </div>
     );
   }
 

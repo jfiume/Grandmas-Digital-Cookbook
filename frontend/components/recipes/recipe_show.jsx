@@ -18,11 +18,7 @@ export const PartentSection = styled.section`
 export const IngredientsList = ({ ingredient }) => {
   console.log({ingredient});
   return (
-    <ul>
-      <li>
-        {ingredient}
-      </li>
-    </ul>
+    <li>{ingredient}</li>
   )
 }
 
@@ -44,8 +40,6 @@ class RecipeShow extends Component {
 
   renderIngredients() {
     const ingredients = this.props.currentRecipe.ingredients;
-    // console.log(ingredients);
-    // ingredients.forEach(ingredient => console.log(ingredient));
     return (
       ingredients.map(ingredient => <IngredientsList key={ingredient} ingredient={ingredient} />
       )

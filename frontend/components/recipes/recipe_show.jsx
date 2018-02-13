@@ -15,9 +15,21 @@ export const PartentSection = styled.section`
 
 `;
 
+export const IngredientsList = ({ ingredient }) => {
+  console.log({ingredient});
+  return (
+    <ul>
+      <li>
+        {ingredient}
+      </li>
+    </ul>
+  )
+}
+
 class RecipeShow extends Component {
   constructor(props) {
     super(props);
+    this.renderIngredients = this.renderIngredients.bind(this);
   }
 
   componentDidMount() {
@@ -30,20 +42,29 @@ class RecipeShow extends Component {
     }
   }
 
+  renderIngredients() {
+    const ingredients = this.props.currentRecipe.ingredients;
+    // console.log(ingredients);
+    // ingredients.forEach(ingredient => console.log(ingredient));
+    return (
+      ingredients.map(ingredient => <IngredientsList key={ingredient} ingredient={ingredient} />
+      )
+    );
+  }
+
   render() {
     if (this.props.recipeId === parseInt(this.props.match.params.id)) {
       const recipe = this.props.currentRecipe;
-      console.log(recipe.ingredients);
       return (
         <PartentSection>
-          <Ingredients>{recipe.ingredients}</Ingredients>
+          <Ingredients>{this.renderIngredients()}</Ingredients>
           <Directions>{recipe.directions}</Directions>
         </PartentSection>
       );
     } else {
       return (
         <Loading>loading</Loading>
-      )
+      );
     }
   }
 }

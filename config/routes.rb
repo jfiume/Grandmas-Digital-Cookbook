@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :recipes, only: [:index, :show, :create, :destroy, :edit]
+    resource :user, only: [:show]
   end
   get 'api/search', to: "api/recipe#search", defaults: {format: :json}
 end

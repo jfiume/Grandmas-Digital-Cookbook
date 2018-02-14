@@ -2,26 +2,16 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Loading from './recipe_index';
-
-export const Ingredients = styled.article`
-
-`;
-
-export const Directions = styled.article`
-
-`;
-
-export const Prep = styled.article`
-
-`;
-
-export const ParentSection = styled.section`
-
-`;
-
-export const HeadingSection = styled.section`
-
-`;
+import { Link } from 'react-router-dom';
+import {
+  Ingredients,
+  Directions,
+  Prep,
+  ParentSection,
+  HeadingSection,
+  Pic,
+  Title,
+} from './recipe_show_styles';
 
 export const IngredientsList = ({ ingredient }) => {
   return (
@@ -105,8 +95,9 @@ class RecipeShow extends Component {
       const recipe = this.props.currentRecipe;
       return (
         <ParentSection>
-          <h1>{recipe.title}</h1>
-          <img width={200} src={recipe.image_url} alt={recipe.title} />
+          <Link to={'/recipes'}>Home</Link>
+          <Title>{recipe.title}</Title>
+          <Pic src={recipe.image_url} alt={recipe.title} />
           <Ingredients>{this.renderIngredients()}</Ingredients>
           <Prep>{this.renderPrep()}</Prep>
           <Directions>{this.renderDirections()}</Directions>

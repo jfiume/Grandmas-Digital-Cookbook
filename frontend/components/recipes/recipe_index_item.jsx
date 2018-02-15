@@ -34,7 +34,7 @@ class RecipeIndexItem extends Component {
     const { recipe } = this.props;
     return (
       <RecipeIndexLi>
-        <Link to={`/recipe/${recipe.id}`}>
+        <Link to={`/recipes/${recipe.id}`}>
           <img src={recipe.image_url} alt={recipe.title} />
           <RecipeAttributes>
             <RecipeName>{recipe.title}</RecipeName>

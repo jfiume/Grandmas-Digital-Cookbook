@@ -2,6 +2,7 @@ import React from 'react';
 import RecipeIndexItemContainer from './recipes/recipe_index_item_container';
 import RecipeIndexContainer from './recipes/recipe_index_container';
 import RecipeShowContainer from './recipes/recipe_show_container';
+import { ProtectedRoute } from '../util/route_util';
 import {
   Route,
   Redirect,
@@ -12,10 +13,11 @@ import {
 
 const App = () => (
   <div>
-    <Route path="/demo" component={RecipeIndexItemContainer}/>
-    <Route path="/recipe/:id" component={RecipeShowContainer}/>
-    <Route exact path="/recipes" component={RecipeIndexContainer}/>
-
+    <Switch>
+      <Route path="/demo" component={RecipeIndexItemContainer}/>
+      <ProtectedRoute path="/recipes/:id" component={RecipeShowContainer}/>
+      <ProtectedRoute exact path="/recipes" component={RecipeIndexContainer}/>
+    </Switch>
   </div>
 );
 

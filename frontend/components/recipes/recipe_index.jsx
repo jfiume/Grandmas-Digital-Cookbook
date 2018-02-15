@@ -23,11 +23,13 @@ class RecipeIndex extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchRecipes();
+    if (this.props.fetchRecipes) {
+      this.props.fetchRecipes();
+    }
   }
 
   render() {
-    if (Object.keys(this.props.recipes).length > 0) {
+    if (this.props.recipes && Object.keys(this.props.recipes).length > 0) {
       const { recipes } = this.props;
 
       return (

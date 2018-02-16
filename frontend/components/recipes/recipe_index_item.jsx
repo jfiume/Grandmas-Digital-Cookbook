@@ -11,11 +11,16 @@ const RecipeAttributes = styled.article`
 
 `;
 
+const Pic = styled.img`
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+`;
+
 const RecipeName = styled.p`
-  list-style: none;
   text-align: justify;
-  font-size: .8em;
-  text-decoration: none;
+  font-size: 1em;
+  position: relative;
   color: black;
   margin: 0px;
   padding: 0px;
@@ -35,7 +40,7 @@ class RecipeIndexItem extends Component {
     return (
       <RecipeIndexLi>
         <Link to={`/recipes/${recipe.id}`}>
-          <img src={recipe.image_url} alt={recipe.title} />
+          <Pic src={recipe.image_url} alt={recipe.title} />
           <RecipeAttributes>
             <RecipeName>{recipe.title}</RecipeName>
           </RecipeAttributes>

@@ -11,6 +11,7 @@ import {
   HeadingSection,
   Pic,
   Title,
+  Headers,
 } from './recipe_show_styles';
 
 export const IngredientsList = ({ ingredient }) => {
@@ -56,7 +57,7 @@ class RecipeShow extends Component {
     const ingredients = this.props.currentRecipe.ingredients;
     return (
       <div>
-        <h2>Ingredients</h2>
+        <Headers>Ingredients</Headers>
         <ul>
           {ingredients.map(ingredient => <IngredientsList key={ingredient} ingredient={ingredient} /> )}
         </ul>
@@ -68,7 +69,7 @@ class RecipeShow extends Component {
     const directions = this.props.currentRecipe.directions;
     return (
       <div>
-        <h2>Directions</h2>
+        <Headers>Directions</Headers>
         <ul>
           {directions.map(direction => <DirectionsList key={direction} direction={direction} /> )}
         </ul>
@@ -81,7 +82,7 @@ class RecipeShow extends Component {
     if (prep.length !== 0) {
       return (
         <div>
-          <h2>Prep</h2>
+          <Headers>Prep</Headers>
           <ul>
             {prep.map(prepSteps => <PrepList key={prepSteps} prep={prepSteps} /> )}
           </ul>
@@ -98,9 +99,9 @@ class RecipeShow extends Component {
           <Link to={'/recipes'}>Home</Link>
           <Title>{recipe.title}</Title>
           <Pic src={recipe.image_url} alt={recipe.title} />
+          <Directions>{this.renderDirections()}</Directions>
           <Ingredients>{this.renderIngredients()}</Ingredients>
           <Prep>{this.renderPrep()}</Prep>
-          <Directions>{this.renderDirections()}</Directions>
         </ParentSection>
       );
     } else {

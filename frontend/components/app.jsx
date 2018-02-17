@@ -14,7 +14,6 @@ import {
 const App = () => (
   <div>
     <Switch>
-      <Route path="/demo" component={RecipeIndexItemContainer}/>
       <ProtectedRoute path="/recipes/:id" component={RecipeShowContainer}/>
       <ProtectedRoute exact path="/recipes" component={RecipeIndexContainer}/>
     </Switch>

@@ -1,9 +1,9 @@
 import * as sessionUtil from '../util/session_util';
 
-export const RECIEVE_CURRENT_USER = 'RECIEVE_CURRENT_USER';
+export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 
-export const recieveCurrentUser = currentUser => ({
-  type: RECIEVE_CURRENT_USER,
+export const logoutCurrentUser = currentUser => ({
+  type: LOGOUT_CURRENT_USER,
   currentUser
 });
 

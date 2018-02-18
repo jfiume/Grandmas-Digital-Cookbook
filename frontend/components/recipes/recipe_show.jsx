@@ -96,7 +96,6 @@ class RecipeShow extends Component {
       const recipe = this.props.currentRecipe;
       return (
         <ParentSection>
-          <Link to={'/recipes'}>Home</Link>
           <Title>{recipe.title}</Title>
           <Pic src={recipe.image_url} alt={recipe.title} />
           <Directions>{this.renderDirections()}</Directions>

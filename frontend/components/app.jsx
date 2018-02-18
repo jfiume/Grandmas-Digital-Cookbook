@@ -2,7 +2,8 @@ import React from 'react';
 import RecipeIndexItemContainer from './recipes/recipe_index_item_container';
 import RecipeIndexContainer from './recipes/recipe_index_container';
 import RecipeShowContainer from './recipes/recipe_show_container';
-import NavHeader from './nav/nav_header_container';
+import NavHeaderContainer from './nav/nav_header_container';
+import SplashContainer from './splash/splash_container';
 import { ProtectedRoute } from '../util/route_util';
 import {
   Route,
@@ -15,11 +16,12 @@ import {
 const App = () => (
   <div>
     <header>
-      <ProtectedRoute path="/" component={NavHeader}/>
+      <ProtectedRoute path="/" component={NavHeaderContainer}/>
     </header>
     <Switch>
       <ProtectedRoute path="/recipes/:id" component={RecipeShowContainer}/>
       <ProtectedRoute exact path="/recipes" component={RecipeIndexContainer}/>
+      <Route exact path="/" component={SplashContainer}/>
     </Switch>
   </div>
 );

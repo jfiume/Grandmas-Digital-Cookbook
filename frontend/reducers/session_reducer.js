@@ -3,8 +3,7 @@ import merge from 'lodash/merge';
 import LOGOUT_CURRENT_USER from '../actions/session_actions';
 
 const nullUser = Object.freeze({
-  currentUser: null,
-  errors: []
+  currentUser: null
 });
 
 const SessionReducer = (state = nullUser, action) => {

@@ -9,6 +9,6 @@ export const logoutCurrentUser = currentUser => ({
 
 export const logout = () => dispatch => (
   sessionUtil.logout().then(user => (
-    dispatch(receiveCurrentUser(null))
+    dispatch(logoutCurrentUser(null))
   ))
 );

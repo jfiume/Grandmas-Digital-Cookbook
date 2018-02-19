@@ -22,6 +22,7 @@ const App = () => (
       <ProtectedRoute path="/recipes/:id" component={RecipeShowContainer}/>
       <ProtectedRoute exact path="/recipes" component={RecipeIndexContainer}/>
       <SplashRoute exact path="/" component={SplashContainer}/>
+      <Route path="logout" />
     </Switch>
   </div>
 );

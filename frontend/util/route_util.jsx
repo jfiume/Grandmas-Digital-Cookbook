@@ -19,8 +19,19 @@ const Protected = ({component: Component, path, loggedIn}) => (
   )} />
 );
 
+const Splash = ({component: Component, path, loggedIn}) => (
+  <Route path={path} render={(props) => (
+    loggedIn? (
+      <Redirect to="/recipes" />
+    ) : (
+      <Component {...props} />
+    )
+  )} />
+)
+
 const mapStateToProps = state => {
   return {loggedIn: Boolean(state.session.currentUser)};
 };
 
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
+export const SplashRoute = withRouter(connect(mapStateToProps, null)(Splash));

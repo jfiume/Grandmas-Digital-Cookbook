@@ -4,7 +4,7 @@ import RecipeIndexContainer from './recipes/recipe_index_container';
 import RecipeShowContainer from './recipes/recipe_show_container';
 import NavHeaderContainer from './nav/nav_header_container';
 import SplashContainer from './splash/splash_container';
-import { ProtectedRoute } from '../util/route_util';
+import { ProtectedRoute, SplashRoute } from '../util/route_util';
 import {
   Route,
   Redirect,
@@ -21,7 +21,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path="/recipes/:id" component={RecipeShowContainer}/>
       <ProtectedRoute exact path="/recipes" component={RecipeIndexContainer}/>
-      <Route exact path="/" component={SplashContainer}/>
+      <SplashRoute exact path="/" component={SplashContainer}/>
     </Switch>
   </div>
 );

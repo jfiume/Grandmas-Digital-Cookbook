@@ -27,7 +27,22 @@ const Splash = ({component: Component, path, loggedIn}) => (
       <Component {...props} />
     )
   )} />
-)
+);
+
+const Header = ({component: Component, path, loggedIn}) => {
+  const page = window.location.hash.slice(2)
+  if (loggedIn && page !== "logout") {
+    return (
+      <Route path={path} render={(props) => (
+        <Component {...props} />
+      )} />
+    )
+  } else {
+    return (
+      <div></div>
+    )
+  }
+};
 
 const mapStateToProps = state => {
   return {loggedIn: Boolean(state.session.currentUser)};
@@ -35,3 +50,4 @@ const mapStateToProps = state => {
 
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
 export const SplashRoute = withRouter(connect(mapStateToProps, null)(Splash));
+export const HeaderRoute = withRouter(connect(mapStateToProps, null)(Header));

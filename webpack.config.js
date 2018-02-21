@@ -34,9 +34,7 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: [
-          /node_modules/,
-          /erb/,
-          /html/,
+          /node_modules/
         ],
         loader: 'babel-loader',
         query: {

@@ -33,9 +33,7 @@ module.exports = {
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
-        exclude: [
-          /node_modules/
-        ],
+        exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']

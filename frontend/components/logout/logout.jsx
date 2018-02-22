@@ -13,7 +13,7 @@ class LogOut extends Component {
     return (
       <section>
         <h1>You have successfully logged out of Granda's Digital Cookbook</h1>
-        <a href="http://localhost:3000/users/sign_in">To Log back in</a>
+        <a href="https://grandmas-digital-cookbook.herokuapp.com/users/sign_in">To Log back in</a>
       </section>
     )
   }

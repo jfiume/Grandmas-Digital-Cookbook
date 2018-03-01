@@ -13,7 +13,7 @@ class Splash extends Component {
     return (
       <section>
         <h1>Welcome to Grandma's Digital Cookbook</h1>
-        <a href="https://grandmas-digital-cookbook.herokuapp.com/users/sign_in"> Sign In</a>
+        {/* <a href="https://grandmas-digital-cookbook.herokuapp.com/users/sign_in"> Sign In</a> */}
       </section>
     )
   }

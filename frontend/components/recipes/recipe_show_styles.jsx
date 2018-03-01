@@ -10,6 +10,7 @@ export const Directions = styled.article`
   width: 800px;
   margin: 10px;
   margin-left: 20px;
+  margin-right: 40px;
   padding: 10px;
 `;
 

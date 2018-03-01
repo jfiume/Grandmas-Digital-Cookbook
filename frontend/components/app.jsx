@@ -17,13 +17,13 @@ import {
 const App = () => (
   <div>
     <header>
-      <HeaderRoute path="/" component={NavHeaderContainer}/>
+      <Route path="/" component={NavHeaderContainer}/>
     </header>
     <Switch>
-      <ProtectedRoute path="/recipes/:id" component={RecipeShowContainer}/>
-      <ProtectedRoute exact path="/recipes" component={RecipeIndexContainer}/>
-      <SplashRoute exact path="/" component={SplashContainer}/>
-      <Route path="/logout" component={LogOutContainer}/>
+      <Route path="/recipes/:id" component={RecipeShowContainer}/>
+      <Route exact path="/recipes" component={RecipeIndexContainer}/>
+      {/* <Route exact path="/" component={SplashContainer}/> */}
+      {/* <Route path="/logout" component={LogOutContainer}/> */}
     </Switch>
   </div>
 );

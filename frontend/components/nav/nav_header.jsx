@@ -23,16 +23,16 @@ class NavHeader extends Component {
 
   handleLogOut(e) {
     e.preventDefault();
-    this.props.logout().then(
-      this.props.history.push("/logout")
-    );
+    // this.props.logout().then(
+    //   this.props.history.push("/logout")
+    // );
   }
 
   render () {
     return (
       <nav>
         <HomeLink onClick={this.handleHome}>HOME</HomeLink>
-        <HomeLink onClick={this.handleLogOut}>Log Out</HomeLink>
+        {/* <HomeLink onClick={this.handleLogOut}>Log Out</HomeLink> */}
       </nav>
     )
   }

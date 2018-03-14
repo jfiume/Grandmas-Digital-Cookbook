@@ -4,10 +4,10 @@ class Api::RecipesController < ApplicationController
   def index
     query = params[:query]
     if query
-      if query[:genre]
-        search_by_genere
-      else
+      if query[:title]
         search_by_title
+      else
+        type_of_food
       end
     else
       @recipes = Recipe.all
@@ -26,9 +26,9 @@ class Api::RecipesController < ApplicationController
     render "api/recipes/index"
   end
 
-  def search_by_genere
-    genre = params[:query][:genre].downcase
-    @recipes = Recipe.where("lower(genre) LIKE ?", "%#{genre}%")
+  def type_of_food
+    type_of_food = params[:query][:genre].downcase
+    @recipes = Recipe.where("lower(type_of_food) LIKE ?", "%#{type_of_food}%")
   end
 
   def create

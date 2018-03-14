@@ -32,7 +32,6 @@ export const Headers = styled.h2`
 `;
 
 export const Pic = styled.img`
-  width: 75%;
   height: 500px;
   display: block;
   margin-left: auto;

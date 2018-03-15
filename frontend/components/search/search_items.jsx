@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 
-class SearchResultItems extends Compent {
+class SearchItems extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: "title";
+      type: "title",
       val: ""
     };
     this.onChangeVal = this.onChangeVal.bind(this);
@@ -32,11 +32,11 @@ class SearchResultItems extends Compent {
         <input type="text" value={this.state.val} onChange={this.onChangeVal} />
         <select onChange={this.onSelectType}>
           <option value="title">title</option>
-          <option value="type of food">type of food</option>
+          <option value="type_of_food">type of food</option>
         </select>
       </form>
     )
   }
 }
 
-export default SearchResultItems;
+export default SearchItems;

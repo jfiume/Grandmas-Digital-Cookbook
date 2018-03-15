@@ -5,6 +5,7 @@ import RecipeShowContainer from './recipes/recipe_show_container';
 import NavHeaderContainer from './nav/nav_header_container';
 import SplashContainer from './splash/splash_container';
 import LogOutContainer from './logout/logout_container';
+import SearchItemsContainer from './search/search_items_container';
 import { ProtectedRoute, SplashRoute, HeaderRoute } from '../util/route_util';
 import {
   Route,
@@ -18,6 +19,7 @@ const App = () => (
   <div>
     <header>
       <Route path="/" component={NavHeaderContainer}/>
+      <Route path="/" component={SearchItemsContainer}/>
     </header>
     <Switch>
       <Route path="/recipes/:id" component={RecipeShowContainer}/>

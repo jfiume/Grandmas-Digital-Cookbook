@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { searchRecipe } from '../../actions/recipe_actions';
-import SearchResultItems from './search_items';
+import SearchItems from './search_items';
 import values from 'lodash/values';
 
 const mapStateToProps = ({recipes}) => ({
@@ -15,4 +15,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchResultItems);\
+)(SearchItems);

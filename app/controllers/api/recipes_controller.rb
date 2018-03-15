@@ -22,13 +22,13 @@ class Api::RecipesController < ApplicationController
 
   def search_by_title
     title = params[:query][:title].downcase
-    @recipes = Recipe.where("lower(title) LIKE ?", "%#{title}%")
+    @recipes = Recipe.where("lower(title) LIKE ?", "#{title}%")
     render "api/recipes/index"
   end
 
   def type_of_food
-    type_of_food = params[:query][:genre].downcase
-    @recipes = Recipe.where("lower(type_of_food) LIKE ?", "%#{type_of_food}%")
+    type_of_food = params[:query][:type_of_food].downcase
+    @recipes = Recipe.where("lower(type_of_food) LIKE ?", "#{type_of_food}%")
   end
 
   def create

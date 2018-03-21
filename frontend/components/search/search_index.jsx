@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import RecipeIndexItemContainer from '../recipes/recipe_index_item_container';
 
 class SearchIndex extends Component {

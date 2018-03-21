@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
+const SearchBox = styled.form`
+  position: relative;
+  left: 140px;
+  top: -20px;
+`;
 
 class SearchItems extends Component {
   constructor(props) {
@@ -27,14 +33,14 @@ class SearchItems extends Component {
   render() {
     const { results } = this.props;
     return (
-      <form>
+      <SearchBox>
         <label>Search:</label>
         <input type="text" value={this.state.val} onChange={this.onChangeVal} />
         <select onChange={this.onSelectType}>
           <option value="title">title</option>
           <option value="type_of_food">type of food</option>
         </select>
-      </form>
+      </SearchBox>
     )
   }
 }

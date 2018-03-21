@@ -15,9 +15,19 @@ import {
   HashRouter,
 } from 'react-router-dom'
 
+const headerStyle = {
+  position: 'fixed',
+  zIndex: '1',
+  backgroundColor: 'grey',
+  width: '100%',
+  left: '0px',
+  top: '0px',
+  paddingTop: '15px'
+}
+
 const App = () => (
   <div>
-    <header>
+    <header style={headerStyle}>
       <Route path="/" component={NavHeaderContainer}/>
       <Route path="/" component={SearchItemsContainer}/>
     </header>

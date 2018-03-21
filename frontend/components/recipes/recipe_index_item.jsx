@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 // defining styled components
 const RecipeIndexLi = styled.li`
   list-style: none;
+  position: relative;
+  top: 60px;
 `;
 
 const RecipeAttributes = styled.article`
@@ -25,12 +27,12 @@ const RecipeName = styled.p`
   text-align: justify;
   font-size: 1.5em;
   position: relative;
-  color: white;
+  color: black;
   margin: 0px;
   padding: 0px;
   word-break: normal;
   width: 300px;
-  text-decoration: none;
+  top: -40px;
 `;
 // end styled components
 
@@ -44,7 +46,7 @@ class RecipeIndexItem extends Component {
     const { recipe } = this.props;
     return (
       <RecipeIndexLi>
-        <Link to={`/recipes/${recipe.id}`}>
+        <Link to={`/recipes/${recipe.id}`} style={{textDecoration: 'none', 'color': 'black'}}>
           <RecipeAttributes>
             <RecipeName>{recipe.title}</RecipeName>
           </RecipeAttributes>

@@ -28,8 +28,8 @@ const headerStyle = {
 const App = () => (
   <div>
     <header style={headerStyle}>
-      <Route path="/" component={NavHeaderContainer}/>
-      <Route path="/" component={SearchItemsContainer}/>
+      <Route path="/recipes" component={NavHeaderContainer}/>
+      <Route exact path="/recipes" component={SearchItemsContainer}/>
     </header>
     <Switch>
       <Route path="/recipes/:id" component={RecipeShowContainer}/>

@@ -7,6 +7,8 @@ const RecipeIndexLi = styled.li`
   list-style: none;
   position: relative;
   top: 60px;
+  clear: both;
+  margin-bottom: 60px;
 `;
 
 const RecipeAttributes = styled.article`
@@ -18,9 +20,9 @@ const RecipeAttributes = styled.article`
 `;
 
 const Pic = styled.img`
-  width: 45%;
-  height: 50%;
-  padding: 5px;
+  width: 500px;
+  height: 300px;
+  padding: 10px;
 `;
 
 const RecipeName = styled.p`

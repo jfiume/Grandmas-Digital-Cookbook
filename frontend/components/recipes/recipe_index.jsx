@@ -9,11 +9,12 @@ export const Loading = styled.div`
 `;
 
 const AllRecipes = styled.section`
-
 `;
 
 const Recipes = styled.ul`
-
+  columns: 2;
+  margin: auto;
+  margin-left: 40px;
 `;
 // end styled components
 

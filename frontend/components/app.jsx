@@ -29,7 +29,7 @@ const App = () => (
   <div>
     <header style={headerStyle}>
       <Route path="/" component={NavHeaderContainer}/>
-      <Route exact path="/recipes" component={SearchItemsContainer}/>
+      <Route path="/" component={SearchItemsContainer}/>
     </header>
     <Switch>
       <Route path="/recipes/:id" component={RecipeShowContainer}/>

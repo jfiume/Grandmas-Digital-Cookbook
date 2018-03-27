@@ -28,12 +28,12 @@ const headerStyle = {
 const App = () => (
   <div>
     <header style={headerStyle}>
-      <Route path="/recipes" component={NavHeaderContainer}/>
+      <Route path="/" component={NavHeaderContainer}/>
       <Route exact path="/recipes" component={SearchItemsContainer}/>
     </header>
     <Switch>
       <Route path="/recipes/:id" component={RecipeShowContainer}/>
-      <Route exact path="/recipes" component={RecipeIndexContainer}/>
+      <Route path="/" component={RecipeIndexContainer}/>
       {/* <Route exact path="/" component={SplashContainer}/> */}
       {/* <Route path="/logout" component={LogOutContainer}/> */}
     </Switch>

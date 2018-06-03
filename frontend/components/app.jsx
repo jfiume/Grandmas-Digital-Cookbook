@@ -6,6 +6,7 @@ import NavHeaderContainer from './nav/nav_header_container';
 import SplashContainer from './splash/splash_container';
 import LogOutContainer from './logout/logout_container';
 import SearchItemsContainer from './search/search_items_container';
+import AddRecipeFormContainer from './add_forms/add_form_container';
 import { ProtectedRoute, SplashRoute, HeaderRoute } from '../util/route_util';
 import {
   Route,
@@ -32,8 +33,9 @@ const App = () => (
       <Route path="/" component={SearchItemsContainer}/>
     </header>
     <Switch>
+      <Route exact path="/recipes" component={RecipeIndexContainer}/>
+      <Route exact path="/recipes/add" component={AddRecipeFormContainer} />
       <Route path="/recipes/:id" component={RecipeShowContainer}/>
-      <Route path="/" component={RecipeIndexContainer}/>
       {/* <Route exact path="/" component={SplashContainer}/> */}
       {/* <Route path="/logout" component={LogOutContainer}/> */}
     </Switch>

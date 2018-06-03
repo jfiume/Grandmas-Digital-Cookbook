@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const RecipeIndexLi = styled.li`
   list-style: none;
   position: relative;
-  top: 60px;
+  top: 80px;
   clear: both;
   margin-bottom: 60px;
 `;

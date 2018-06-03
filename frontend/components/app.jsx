@@ -30,12 +30,12 @@ const App = () => (
   <div>
     <header style={headerStyle}>
       <Route path="/" component={NavHeaderContainer}/>
-      <Route path="/" component={SearchItemsContainer}/>
+      <Route path="/recipes" component={SearchItemsContainer}/>
     </header>
     <Switch>
       <Route exact path="/recipes" component={RecipeIndexContainer}/>
-      <Route exact path="/recipes/add" component={AddRecipeFormContainer} />
-      <Route path="/recipes/:id" component={RecipeShowContainer}/>
+      <Route exact path="/add" component={AddRecipeFormContainer} />
+      <Route path="/recipe/:id" component={RecipeShowContainer}/>
       {/* <Route exact path="/" component={SplashContainer}/> */}
       {/* <Route path="/logout" component={LogOutContainer}/> */}
     </Switch>

@@ -30,3 +30,9 @@ export const searchRecipe = (query) => dispatch => (
     dispatch(receiveRecipes(recipes))
   ))
 );
+
+export const createRecipe = (recipe) => dispatch => (
+  APIUtil.createRecipe(recipe).then(recipe => (
+    dispatch(receiveRecipe(recipe))
+  ))
+);

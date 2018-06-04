@@ -30,12 +30,19 @@ class AddRecipeForm extends Component {
       prep: '',
       directions: ''
     }
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createRecipe(this.state).then(data => this.props.history.push(`/recipe/${data.recipe.id}`));
   }
 
   render() {
@@ -78,6 +85,7 @@ class AddRecipeForm extends Component {
           onChange={this.update('directions')}
         />
         </Labels>
+        <button onClick={this.handleSubmit}>Submit</button>
       </InputForm>
     )
   }

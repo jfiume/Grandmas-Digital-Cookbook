@@ -19,3 +19,11 @@ export const searchRecipe = (query) => (
     data: { query }
   })
 );
+
+export const createRecipe = (recipe) => {
+  $.ajax({
+    method: 'POST',
+    url: '/api/recipes/',
+    data: { recipe }
+  });
+};

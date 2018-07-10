@@ -33,9 +33,9 @@ const App = () => (
       <Route path="/recipes" component={SearchItemsContainer}/>
     </header>
     <Switch>
-      <Route exact path="/recipes" component={RecipeIndexContainer}/>
-      <Route exact path="/add" component={AddRecipeFormContainer} />
       <Route path="/recipe/:id" component={RecipeShowContainer}/>
+      <Route path="/" component={RecipeIndexContainer}/>
+      <Route exact path="/add" component={AddRecipeFormContainer} />
       {/* <Route exact path="/" component={SplashContainer}/> */}
       {/* <Route path="/logout" component={LogOutContainer}/> */}
     </Switch>

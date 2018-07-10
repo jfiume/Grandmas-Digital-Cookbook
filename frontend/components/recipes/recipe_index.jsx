@@ -15,6 +15,8 @@ const Recipes = styled.ul`
   columns: 2;
   margin: auto;
   margin-left: 40px;
+  top: 60px;
+  position: relative;
 `;
 // end styled components
 

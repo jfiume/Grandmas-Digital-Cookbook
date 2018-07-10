@@ -16,6 +16,7 @@ class SearchItems extends Component {
     };
     this.onChangeVal = this.onChangeVal.bind(this);
     this.onSelectType = this.onSelectType.bind(this);
+    this.renderForm = this.renderForm.bind(this);
   }
 
   onChangeVal(e) {
@@ -30,8 +31,7 @@ class SearchItems extends Component {
     this.setState({type: e.target.value});
   }
 
-  render() {
-    const { results } = this.props;
+  renderForm() {
     return (
       <SearchBox>
         <label>Search:</label>
@@ -42,6 +42,22 @@ class SearchItems extends Component {
         </select>
       </SearchBox>
     )
+  }
+
+  render() {
+    const { results } = this.props;
+    if (results.length > 0) {
+      return (
+        <div>{this.renderForm()}</div>
+      );
+    } else {
+      return (
+        <div>
+          {this.renderForm()}
+          <h1>No Results Found</h1>
+        </div>
+      );
+    }
   }
 }
 

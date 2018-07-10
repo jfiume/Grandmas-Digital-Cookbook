@@ -8,7 +8,7 @@ const Welcome = styled.h1`
 `;
 const LinkStyle = {
   textDecoration: 'none',
-  color: 'black',
+  color: 'white',
   border: 'solid red 5px',
   backgroundColor: 'red'
 }
